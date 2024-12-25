@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[class~="sel"]{
+            height: 450px;
+            width: 450px;
+            background-color: darkmagenta;
+            border: 10px solid rosybrown;
+        }
+        p{
+            height: 450px;
+            width: 450px;
+            background-color: burlywood;
+            border: 10px solid khaki;
+
+            clip: rect(10px,10px,50px,50px);
+            /* clip-path: inset(1%); */
+        }
+    </style>
+</head>
+<body>
+    <p class="timepass sel ba hh">1</p>
+    <p class="timepass sel">2</p>
+    <p class="ba hh">3</p>
+</body>
+</html>

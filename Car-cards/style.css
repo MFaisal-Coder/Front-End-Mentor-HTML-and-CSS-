@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+body {
+    color: white;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    /*inherits from parent's font color. in this case body's font color*/
+    text-decoration: none;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    border-radius: 11px;
+    overflow: hidden;
+
+    max-width: 850px;
+    display: flex;
+    margin: auto;
+}
+
+
+.card {
+    padding: 40px;
+    width: 100%;    /*since all card had different widths based on their content, we gave them width property to fullu tae their parents width*/
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    opacity: 90%;
+}
+
+img{
+    width: 64px;
+    height: 40px;
+}
+
+.card p{
+    opacity: 70%;
+    margin-top: auto;
+    font-size: small;
+    line-height: 2;
+    font-weight: normal;
+}
+
+.card a{
+    border: 2px solid white;
+    padding-inline: 1.7rem;
+    padding-block: 0.7rem;
+    border-radius: 2rem;
+
+    margin-top: 3rem;
+
+    /* margin-right: auto; */
+    align-self: flex-start;
+}
+
+.orange-card {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.blue-card {
+    background-color: hsl(184, 100%, 22%);
+}
+
+
+.green-card {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.orange-card a:hover{
+    color: hsl(31, 77%, 52%);
+    background-color: white;
+}
+.blue-card a:hover{
+    color: hsl(184, 100%, 22%);
+    background-color: white;
+}
+.green-card a:hover{
+    color: hsl(179, 100%, 13%);
+    background-color: white;
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .orange-card a{
+        color: hsl(31, 77%, 52%);
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .blue-card a{
+        color: hsl(184, 100%, 22%);
+        background-color: white;
+    }
+
+    .green-card a{
+        color: hsl(179, 100%, 13%);
+        background-color: white;
+    }
+
+    .main-container{
+        flex-direction: column;
+        max-width: 300px;
+        margin-block: 40px;
+        margin-inline: 40px;
+    }
+
+    .card{
+        width: unset;   /*we are unsetting the width here bcuz our paragraph was overflowigg since we gvae it 100% width of it's parent earlier. So it was taking the parents width causing overflow. Try uncommenting anf then inspect on dev tools <p> tag and its parent*/
+    }
+    
+}
